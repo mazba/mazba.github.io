@@ -2,18 +2,117 @@
 <html>
 <head>
 	<title>Mazba Kamal</title>
+	<link href="https://fonts.googleapis.com/css?family=Cabin|Rammetto+One|Lilita+One" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 </head>
 <body>
 	<h1>hello!</h1>
-	<h2>welcome here!</h2>
+	<h2>i'm Mazba Kamal</h2>
+	<i class="fa fa-angle-down"></i>
+	<p>
+		a passionate software engineer with professional experience of building web applications.
+	</p>
+	<p>specialties include <strong>C, C++, PHP, JavaScript, Node.js, MySql, Angular2, Linux...</strong></p>
+	<div class="social">
+	  <a href="https://github.com/mazba"><i class="fa fa-github-square" aria-hidden="true"></i></a>
+	  <a href="https://www.linkedin.com/in/mazba-kamal-57382864"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+	  <a href="https://mazba.github.io"><i class="fa fa-code" aria-hidden="true"></i></a>
+	  <a href="https://twitter.com/mazba_kamal"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+	  <a href="https://facebook.com/mazba.kamal"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+
+	</div>
 </body>
 </html>
+<script type="text/javascript">
+	$(document).on('ready',function() {
+		var colors = ['#0F240F','#0F1C16','#1D1A2E','#15101C','#1A1E27','#0F1C16','#202614','#271517','#11141B'];
+		var i = 0;
+		setInterval(function(){
+			if(i>8)
+	          	i=0;
+	          // console.log(colors[i]);
+			$("body").animate({
+	          backgroundColor: colors[i]
+	        }, 1000 );
+	        i++;
+		},3000);
+		var j = 0;
+		$("h1").animate({
+         marginLeft:'40px'
+        },600 );
+
+		$("h1").animate({
+         marginLeft:'-40px'
+        }, 600 );
+
+		$("h1").animate({
+         marginLeft:'40px'
+        }, 600 );
+        $("h1").animate({
+         marginLeft:'0px'
+        }, 900 );
+	});
+</script>
 <style type="text/css">
+	p strong{
+		color: #fff
+	}
 	h1{
-		color: #4A8BF6
+		font-size: 139px;
+		color: #fff;
+		font-family: 'Rammetto One', cursive;;
+	}
+	h2{
+
+	}
+	p{
+		color: #aaa
 	}
 	body{
-		background: #eee;
+		color: #fff;
+		background: #11141B;
 		text-align: center;
+		font-family: 'Cabin', sans-serif;
 	}
+	.social a{
+		color: #aaa;
+		font-size: 30px;
+		margin: 0 1px;
+	}
+/*	.fa-facebook-square:hover{
+		color: #3D5C9F;
+	}
+	.fa-linkedin-square:hover{
+		color: #0874B4;
+	}*/
+	.social a:hover{
+		color: #77a6ee;
+	}
+
+	tag {
+	  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+	  transform: translate3d(0, 0, 0);
+	  backface-visibility: hidden;
+	  perspective: 1000px;
+	}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
 </style>
